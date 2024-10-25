@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function DPEPage() {
   // Tableau des étiquettes énergétiques
   const energyLabels = [
@@ -12,11 +14,11 @@ export default function DPEPage() {
 
   return (
     <main className="min-h-screen bg-gray-50">
-      {/* Navigation fil d'Ariane */}
+      {/* Navigation fil d&apos;Ariane */}
       <div className="bg-white shadow">
         <div className="container mx-auto px-4 py-3">
           <div className="text-sm text-gray-600">
-            <a href="/" className="hover:text-blue-600">Accueil</a>
+            <Link href="/" className="hover:text-blue-600">Accueil</Link>
             <span className="mx-2">/</span>
             <span className="text-gray-900">Diagnostic de Performance Énergétique</span>
           </div>
@@ -40,17 +42,17 @@ export default function DPEPage() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Section principale */}
           <div className="md:col-span-2 space-y-8">
-            {/* Qu'est-ce que le DPE */}
+            {/* Qu&apos;est-ce que le DPE */}
             <section className="bg-white rounded-lg shadow-md p-6">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Qu'est-ce que le DPE ?
+                Qu&apos;est-ce que le DPE ?
               </h2>
               <p className="text-gray-700 mb-4">
-                Le Diagnostic de Performance Énergétique (DPE) est un document qui informe sur la performance énergétique d'un logement ou d'un bâtiment, en évaluant sa consommation d'énergie et son impact en termes d'émissions de gaz à effet de serre.
+                Le Diagnostic de Performance Énergétique (DPE) est un document qui informe sur la performance énergétique d&apos;un logement ou d&apos;un bâtiment, en évaluant sa consommation d&apos;énergie et son impact en termes d&apos;émissions de gaz à effet de serre.
               </p>
               <div className="bg-blue-50 border-l-4 border-blue-600 p-4">
                 <p className="text-sm text-blue-900">
-                  Obligatoire lors de la vente ou la location d'un bien immobilier, le DPE est valable 10 ans.
+                  Obligatoire lors de la vente ou la location d&apos;un bien immobilier, le DPE est valable 10 ans.
                 </p>
               </div>
             </section>

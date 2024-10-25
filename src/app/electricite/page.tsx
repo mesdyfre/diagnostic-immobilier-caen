@@ -1,11 +1,13 @@
+import Link from 'next/link';
+
 export default function ElectricitePage() {
   const points = [
     {
       title: "Installation électrique",
       items: [
-        "Présence d'une protection différentielle",
+        "Présence d&apos;une protection différentielle",
         "État des disjoncteurs et fusibles",
-        "Présence d'un dispositif de mise à la terre",
+        "Présence d&apos;un dispositif de mise à la terre",
         "Calibrage des conducteurs"
       ]
     },
@@ -15,7 +17,7 @@ export default function ElectricitePage() {
         "Protection contre les contacts directs",
         "Protection contre les surintensités",
         "État des matériels électriques",
-        "Absence de risques d'électrocution"
+        "Absence de risques d&apos;électrocution"
       ]
     }
   ];
@@ -31,11 +33,11 @@ export default function ElectricitePage() {
 
   return (
     <main className="min-h-screen bg-gray-50">
-      {/* Fil d'Ariane */}
+      {/* Fil d&apos;Ariane */}
       <div className="bg-white shadow">
         <div className="container mx-auto px-4 py-3">
           <div className="text-sm text-gray-600">
-            <a href="/" className="hover:text-blue-600">Diagnostic Immobilier Caen</a>
+            <Link href="/" className="hover:text-blue-600">Diagnostic Immobilier Caen</Link>
             <span className="mx-2">/</span>
             <span className="text-gray-900">Diagnostic Électrique</span>
           </div>
@@ -62,12 +64,12 @@ export default function ElectricitePage() {
             {/* Introduction */}
             <section className="bg-white rounded-lg shadow-md p-6">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Le Diagnostic Électrique (État de l'Installation Intérieure d'Électricité)
+                Le Diagnostic Électrique (État de l&apos;Installation Intérieure d&apos;Électricité)
               </h2>
               <p className="text-gray-700 mb-4">
-                Le diagnostic électrique est une inspection approfondie de l'installation électrique 
+                Le diagnostic électrique est une inspection approfondie de l&apos;installation électrique 
                 de votre bien immobilier à Caen. Cette vérification est obligatoire pour toute vente 
-                d'un logement dont l'installation électrique a plus de 15 ans.
+                d&apos;un logement dont l&apos;installation électrique a plus de 15 ans.
               </p>
               <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4">
                 <p className="text-sm text-yellow-800">
@@ -131,7 +133,7 @@ export default function ElectricitePage() {
                 </p>
                 <div className="bg-blue-50 border-l-4 border-blue-600 p-4">
                   <p className="text-sm text-blue-800">
-                    Le diagnostic est obligatoire pour toute vente d'un logement dont l'installation 
+                    Le diagnostic est obligatoire pour toute vente d&apos;un logement dont l&apos;installation 
                     électrique a plus de 15 ans.
                   </p>
                 </div>
@@ -167,9 +169,9 @@ export default function ElectricitePage() {
                   </div>
                 </div>
 
-                {/* Zones d'intervention */}
+                {/* Zones d&apos;intervention */}
                 <div className="mt-6 bg-gray-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-2">Zones d'intervention</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">Zones d&apos;intervention</h4>
                   <p className="text-sm text-gray-600">
                     Caen et agglomération, Calvados : Bayeux, Falaise, Lisieux, Deauville, 
                     Cabourg, Ouistreham...

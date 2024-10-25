@@ -1,7 +1,7 @@
 'use client'
 
 import { FC, useState } from 'react'
-
+import Link from 'next/link'
 
 interface ServiceProps {
   title: string
@@ -22,13 +22,13 @@ const HomePage: FC = () => {
     },
     {
       title: "Amiante",
-      description: "Repérage des matériaux contenant de l'amiante",
+      description: "Repérage des matériaux contenant de l&apos;amiante",
       icon: "🔍",
       link: "/amiante"
     },
     {
       title: "Électricité",
-      description: "Vérification de l'installation électrique",
+      description: "Vérification de l&apos;installation électrique",
       icon: "⚡",
       link: "/electricite"
     },
@@ -68,7 +68,7 @@ const HomePage: FC = () => {
     <header className="bg-white shadow-md sticky top-0 z-50">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <a href="/" className="text-2xl font-bold text-blue-600">DIAG IMMO CAEN</a>
+          <Link href="/" className="text-2xl font-bold text-blue-600">DIAG IMMO CAEN</Link>
           
           {/* Menu Desktop */}
           <div className="hidden md:flex space-x-6 items-center">
@@ -183,7 +183,7 @@ const HomePage: FC = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {services.map((service) => (
-            <a 
+            <Link 
               key={service.title}
               href={service.link}
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-4 md:p-6 block group"
@@ -207,7 +207,7 @@ const HomePage: FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
