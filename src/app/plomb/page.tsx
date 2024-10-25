@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import Link from 'next/link'
 
 interface RisqueProps {
   title: string
@@ -47,7 +48,7 @@ const PlombPage: FC = () => {
           Diagnostic Plomb (CREP) à Caen
         </h1>
         <p className="text-xl opacity-90">
-          Constat de Risque d'Exposition au Plomb par un expert certifié
+          Constat de Risque d&apos;Exposition au Plomb par un expert certifié
         </p>
       </div>
     </div>
@@ -57,7 +58,7 @@ const PlombPage: FC = () => {
     <div className="bg-white shadow">
       <div className="container mx-auto px-4 py-3">
         <div className="text-sm text-gray-600">
-          <a href="/" className="hover:text-blue-600">Diagnostic Immobilier Caen</a>
+          <Link href="/" className="hover:text-blue-600">Diagnostic Immobilier Caen</Link>
           <span className="mx-2">/</span>
           <span className="text-gray-900">Diagnostic Plomb (CREP)</span>
         </div>
@@ -73,7 +74,7 @@ const PlombPage: FC = () => {
           Le Diagnostic Plomb - CREP
         </h2>
         <p className="text-gray-700 mb-4">
-          Le Constat de Risque d'Exposition au Plomb (CREP) est obligatoire pour les logements 
+          Le Constat de Risque d&apos;Exposition au Plomb (CREP) est obligatoire pour les logements 
           construits avant 1949. À Caen et dans le Calvados, notre expertise vous garantit un 
           diagnostic plomb conforme à la réglementation.
         </p>
@@ -85,6 +86,7 @@ const PlombPage: FC = () => {
         </div>
       </section>
 
+      {/* Le reste du code reste identique... */}
       {/* Risques */}
       <section className="bg-white rounded-lg shadow-md p-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">
