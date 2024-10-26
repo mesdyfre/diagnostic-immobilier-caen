@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -18,21 +20,21 @@ export const metadata = {
         alt: 'Diagnostic ERP Caen',
       },
     ],
-  },
+  }
 }
 
 export default function ErpPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section avec image */}
       <div className="relative bg-white shadow">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/images/erp-hero.jpg"
             alt="Carte des risques naturels et technologiques"
-            className="w-full h-[400px] object-cover"
+            fill
+            className="object-cover"
+            priority
           />
-          {/* Overlay légèrement ajusté pour mieux fonctionner avec l'image réelle */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#0056b3]/80 to-transparent mix-blend-multiply" />
         </div>
         <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
@@ -48,19 +50,16 @@ export default function ErpPage() {
         </div>
       </div>
 
-      {/* Contenu Principal */}
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Section principale */}
           <div className="lg:col-span-2 space-y-12">
-            {/* Introduction */}
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 Le diagnostic ERP, une obligation légale
               </h2>
               <div className="prose max-w-none text-gray-500">
                 <p>
-                  L'État des Risques et Pollutions (ERP) est un document obligatoire qui doit être annexé 
+                  L&apos;État des Risques et Pollutions (ERP) est un document obligatoire qui doit être annexé 
                   à tout contrat de vente ou de location. Il informe les futurs acquéreurs ou locataires 
                   des risques auxquels le bien est exposé : naturels (inondation, séisme...), miniers, 
                   technologiques et pollution des sols.
@@ -68,7 +67,6 @@ export default function ErpPage() {
               </div>
             </section>
 
-            {/* Points Clés */}
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 Points essentiels du diagnostic
@@ -79,7 +77,7 @@ export default function ErpPage() {
                     Validité
                   </h3>
                   <p className="text-gray-600">
-                    6 mois à compter de sa date d'émission
+                    6 mois à compter de sa date d&apos;émission
                   </p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md">
@@ -109,14 +107,13 @@ export default function ErpPage() {
               </div>
             </section>
 
-            {/* Risques évalués */}
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 Risques évalués
               </h2>
               <div className="prose max-w-none text-gray-500">
                 <p>
-                  Le diagnostic ERP prend en compte l'ensemble des risques suivants :
+                  Le diagnostic ERP prend en compte l&apos;ensemble des risques suivants :
                 </p>
                 <ul className="mt-4 space-y-2">
                   <li>Risques naturels : inondation, mouvement de terrain, séisme, avalanche, feux de forêt</li>
@@ -129,25 +126,23 @@ export default function ErpPage() {
               </div>
             </section>
 
-            {/* Réglementation */}
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 Cadre réglementaire
               </h2>
               <div className="prose max-w-none text-gray-500">
                 <p>
-                  L'ERP est encadré par :
+                  L&apos;ERP est encadré par :
                 </p>
                 <ul className="mt-4 space-y-2">
-                  <li>Articles L.125-5 et R.125-23 à 27 du Code de l'environnement</li>
-                  <li>Arrêté du 13 juillet 2018 modifiant l'arrêté du 13 octobre 2005</li>
-                  <li>Arrêté du 18 décembre 2017 modifiant l'arrêté du 19 mars 2013</li>
+                  <li>Articles L.125-5 et R.125-23 à 27 du Code de l&apos;environnement</li>
+                  <li>Arrêté du 13 juillet 2018 modifiant l&apos;arrêté du 13 octobre 2005</li>
+                  <li>Arrêté du 18 décembre 2017 modifiant l&apos;arrêté du 19 mars 2013</li>
                 </ul>
               </div>
             </section>
           </div>
 
-          {/* Barre latérale */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
               <div className="bg-white rounded-lg shadow-md p-6">
@@ -177,7 +172,7 @@ export default function ErpPage() {
                   </div>
                   <div className="pt-4 border-t border-gray-200">
                     <h3 className="font-medium text-gray-900 mb-2">
-                      Zone d'intervention
+                      Zone d&apos;intervention
                     </h3>
                     <p className="text-gray-600">
                       Caen et tout le Calvados
