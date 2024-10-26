@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Devis gratuit - Diagnostics immobiliers Caen | Diag Immo Caen',
-  description: 'Demandez votre devis gratuit pour vos diagnostics immobiliers à Caen. Réponse rapide, tarifs transparents, intervention dans tout le Calvados.',
+  title: "Devis gratuit - Diagnostics immobiliers Caen | Diag Immo Caen",
+  description: "Demandez votre devis gratuit pour vos diagnostics immobiliers à Caen. Réponse rapide, tarifs transparents, intervention dans tout le Calvados.",
 }
 
 export default function QuotePage() {
@@ -33,7 +33,7 @@ export default function QuotePage() {
             />
           </div>
 
-          {/* Encart d'informations */}
+          {/* Encart d&apos;informations */}
           <div className="space-y-6">
             {/* Contact direct */}
             <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -92,10 +92,10 @@ export default function QuotePage() {
               </ul>
             </div>
 
-            {/* Zone d'intervention */}
+            {/* Zone d&apos;intervention */}
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h2 className="text-xl font-bold text-gray-900 mb-4">
-                Zone d'intervention
+                Zone d&apos;intervention
               </h2>
               <p className="text-gray-600">
                 Nous intervenons à Caen et dans tout le Calvados pour vos diagnostics immobiliers.

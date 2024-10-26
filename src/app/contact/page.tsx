@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Contact - Expert en diagnostics immobiliers Caen | Diag Immo Caen',
-  description: 'Contactez votre expert en diagnostics immobiliers à Caen. Intervention rapide dans tout le Calvados, devis gratuit sous 24h.',
+  title: "Contact - Expert en diagnostics immobiliers Caen | Diag Immo Caen",
+  description: "Contactez votre expert en diagnostics immobiliers à Caen. Intervention rapide dans tout le Calvados, devis gratuit sous 24h.",
 }
 
 export default function ContactPage() {
@@ -60,7 +60,7 @@ export default function ContactPage() {
                 {/* Horaires */}
                 <div>
                   <h3 className="text-lg font-semibold text-[#0056b3] mb-2">
-                    Horaires d'intervention
+                    Horaires d&apos;intervention
                   </h3>
                   <p className="text-gray-600">
                     Du lundi au vendredi : 8h00 - 19h00<br />
@@ -71,7 +71,7 @@ export default function ContactPage() {
                 {/* Zone */}
                 <div>
                   <h3 className="text-lg font-semibold text-[#0056b3] mb-2">
-                    Zone d'intervention
+                    Zone d&apos;intervention
                   </h3>
                   <p className="text-gray-600">
                     Caen et agglomération<br />
@@ -84,7 +84,7 @@ export default function ContactPage() {
             {/* Devis en ligne */}
             <div className="bg-[#0056b3] p-8 rounded-lg shadow-lg text-white">
               <h2 className="text-2xl font-bold mb-4">
-                Besoin d'un devis ?
+                Besoin d&apos;un devis ?
               </h2>
               <p className="text-gray-100 mb-6">
                 Recevez un devis gratuit et détaillé pour vos diagnostics immobiliers en quelques clics.
