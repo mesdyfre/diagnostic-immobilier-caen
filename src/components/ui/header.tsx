@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image' // Ajout de l'import Image
 import { usePathname } from 'next/navigation'
 import { Menu, X, ChevronDown, Phone } from 'lucide-react'
 
@@ -53,16 +54,22 @@ export function Header() {
           {/* Logo et nom */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <img 
-                src="/images/logo.png" 
-                alt="Diag Immo Caen"
-                className="h-14 w-auto hidden md:block"
-              />
-              <img 
-                src="/images/logo.png" 
-                alt="Diag Immo Caen"
-                className="h-10 w-auto md:hidden"
-              />
+             <Image 
+  src="/images/logo.png" 
+  alt="Diag Immo Caen"
+  width={56}
+  height={56}
+  className="hidden md:block"
+  priority
+/>
+<Image 
+  src="/images/logo.png" 
+  alt="Diag Immo Caen"
+  width={40}
+  height={40}
+  className="md:hidden"
+  priority
+/>
               <div className="ml-3 hidden md:flex flex-col">
                 <span className="text-xl font-bold text-[#0056b3]">Diag Immo Caen</span>
                 <span className="text-sm text-gray-500">Diagnostics immobiliers</span>
@@ -152,11 +159,13 @@ export function Header() {
           <div className="fixed inset-0 bg-black/20" aria-hidden="true" onClick={() => setMobileMenuOpen(false)} />
           <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-white shadow-lg p-6">
             <div className="flex items-center justify-between mb-6">
-              <img 
-                src="/images/logo.png" 
-                alt="Diag Immo Caen"
-                className="h-8 w-auto"
-              />
+            <Image
+  src="/images/logo.png" 
+  alt="Diag Immo Caen"
+  width={32}
+  height={32}
+  priority
+/>
               <button
                 type="button"
                 className="rounded-md p-2 text-gray-400 hover:text-gray-500 hover:bg-gray-100"
