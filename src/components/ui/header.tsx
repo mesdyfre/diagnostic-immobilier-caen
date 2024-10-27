@@ -6,7 +6,17 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Menu, X, ChevronDown, Phone } from 'lucide-react'
 
-const navigation = [
+interface NavigationItem {
+  name: string
+  href: string
+  children?: Array<{
+    name: string
+    href: string
+    description: string
+  }>
+}
+
+const navigation: NavigationItem[] = [
   { name: 'Accueil', href: '/' },
   { 
     name: 'Diagnostics',
@@ -26,15 +36,6 @@ const navigation = [
   { name: 'À propos', href: '/a-propos' },
   { name: 'Contact', href: '/contact' },
 ]
-interface NavigationItem {
-  name: string
-  href: string
-  children?: Array<{
-    name: string
-    href: string
-    description: string
-  }>
-}
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -51,7 +52,7 @@ export function Header() {
             <a href="tel:0766669948" className="hidden sm:flex items-center hover:text-gray-100">
               <Phone className="h-4 w-4 mr-2" />
               07.66.66.99.48
-   </a>
+            </a>
           </div>
         </div>
       </div>
