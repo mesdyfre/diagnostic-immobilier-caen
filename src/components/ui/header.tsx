@@ -1,5 +1,4 @@
-
-    "use client"
+"use client"
 
 import { useState } from 'react'
 import Link from 'next/link'
@@ -28,6 +27,16 @@ const navigation = [
   { name: 'Contact', href: '/contact' },
 ]
 
+interface NavigationItem {
+  name: string
+  href: string
+  children?: Array<{
+    name: string
+    href: string
+    description: string
+  }>
+}
+
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
@@ -35,9 +44,7 @@ export function Header() {
   const isActive = (href: string) => pathname === href
 
   return (
-
-<div className="relative bg-white">
-      {/* Bande supérieure */}
+    <div className="relative bg-white">
       <div className="bg-[#0056b3] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
           <div className="flex justify-between items-center text-sm">
@@ -45,10 +52,11 @@ export function Header() {
             <a href="tel:0766669948" className="hidden sm:flex items-center hover:text-gray-100">
               <Phone className="h-4 w-4 mr-2" />
               07.66.66.99.48
-            </a>
+   </a>
           </div>
         </div>
       </div>
+
 
       {/* Barre de navigation principale */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
