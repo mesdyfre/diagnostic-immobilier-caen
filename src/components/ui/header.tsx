@@ -26,7 +26,6 @@ const navigation = [
   { name: 'À propos', href: '/a-propos' },
   { name: 'Contact', href: '/contact' },
 ]
-
 interface NavigationItem {
   name: string
   href: string

@@ -1,82 +1,18 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { 
-  Home, 
-  Search, 
-  Zap, 
-  Paintbrush, 
-  Ruler, 
-  Square, 
-  AlertTriangle, 
-  Bug, 
   Clock, 
   CheckCircle, 
   Phone,
-  Flame
+  Home
 } from 'lucide-react'
 import { QuoteForm } from '@/components/ui/quote-form'
+import { diagnosticsItems } from '@/data/diagnostics'
 
 export const metadata: Metadata = {
   title: 'Diag Immo Caen - Expert en diagnostics immobiliers',
   description: 'Expert en diagnostics immobiliers à Caen et dans le Calvados. DPE, Amiante, Électricité, Plomb, Gaz, Loi Carrez, Loi Boutin, ERP. Devis gratuit sous 24h.',
 }
-
-const diagnostics = [
-  {
-    href: '/diagnostics/dpe',
-    title: 'DPE',
-    description: 'Diagnostic de Performance Énergétique obligatoire pour la vente et la location',
-    icon: Home,
-  },
-  {
-    href: '/diagnostics/amiante',
-    title: 'Amiante',
-    description: 'Repérage des matériaux contenant de l&apos;amiante',
-    icon: Search,
-  },
-  {
-    href: '/diagnostics/electricite',
-    title: 'Électricité',
-    description: 'Vérification de l&apos;installation électrique',
-    icon: Zap,
-  },
-  {
-    href: '/diagnostics/gaz',
-    title: 'Gaz',
-    description: 'Contrôle de sécurité des installations de gaz',
-    icon: Flame,
-  },
-  {
-    href: '/diagnostics/plomb',
-    title: 'Plomb',
-    description: 'Détection de la présence de plomb dans les peintures',
-    icon: Paintbrush,
-  },
-  {
-    href: '/diagnostics/termites',
-    title: 'Termites',
-    description: 'Détection de la présence de termites et autres insectes xylophages',
-    icon: Bug,
-  },
-  {
-    href: '/diagnostics/carrez',
-    title: 'Loi Carrez',
-    description: 'Mesurage certifié de la surface habitable pour la vente',
-    icon: Ruler,
-  },
-  {
-    href: '/diagnostics/boutin',
-    title: 'Loi Boutin',
-    description: 'Mesurage de la surface habitable pour la location',
-    icon: Square,
-  },
-  {
-    href: '/diagnostics/erp',
-    title: 'ERP',
-    description: 'État des Risques et Pollutions (naturels, miniers, technologiques)',
-    icon: AlertTriangle,
-  },
-]
 
 const features = [
   {
@@ -185,7 +121,7 @@ export default function HomePage() {
           </div>
 
           <div className="mt-10 grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {diagnostics.map((diagnostic) => {
+            {diagnosticsItems.map((diagnostic) => {
               const Icon = diagnostic.icon
               return (
                 <Link
