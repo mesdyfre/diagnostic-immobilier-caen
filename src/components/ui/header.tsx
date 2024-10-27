@@ -199,30 +199,31 @@ export function Header() {
                   </Link>
                 </li>
 
-                {/* Diagnostics avec sous-menu */}
-                <li>
-                  <details className="group">
-                    <summary className="flex items-center justify-between py-2 text-base font-medium text-gray-900 cursor-pointer">
-                      Diagnostics
-                      <ChevronDown className="w-5 h-5 text-gray-500 transition group-open:rotate-180" />
-                    </summary>
-                    <ul className="pl-4 mt-2 space-y-2">
-                      {navigation
-                        .find((item) => item.name === 'Diagnostics')
-                        ?.children.map((diagnostic) => (
-                          <li key={diagnostic.name}>
-                            <Link
-                              href={diagnostic.href}
-                              className="block py-2 text-sm text-gray-600 hover:text-[#0056b3]"
-                              onClick={() => setMobileMenuOpen(false)}
-                            >
-                              {diagnostic.name}
-                            </Link>
-                          </li>
-                        ))}
-                    </ul>
-                  </details>
-                </li>
+{/* Diagnostics avec sous-menu */}
+<li>
+  <details className="group">
+    <summary className="flex items-center justify-between py-2 text-base font-medium text-gray-900 cursor-pointer">
+      Diagnostics
+      <ChevronDown className="w-5 h-5 text-gray-500 transition group-open:rotate-180" />
+    </summary>
+    <ul className="pl-4 mt-2 space-y-2">
+      {navigation
+        .find((item) => item.name === 'Diagnostics')
+        ?.children?.map((diagnostic) => (
+          <li key={diagnostic.name}>
+            <Link
+              href={diagnostic.href}
+              className="block py-2 text-sm text-gray-600 hover:text-[#0056b3]"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {diagnostic.name}
+            </Link>
+          </li>
+        ))}
+    </ul>
+  </details>
+</li>
+
 
                 {/* À propos */}
                 <li>
