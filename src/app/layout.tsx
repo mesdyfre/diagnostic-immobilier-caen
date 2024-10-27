@@ -43,23 +43,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
           {/* En-tête avec navigation */}
           <Header />
 
-          {/* Bannière d&apos;information */}
-          <div className="bg-[#0056b3] text-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-              <div className="flex justify-between items-center">
-                <p className="text-sm">
-                  Intervention rapide dans tout le Calvados
-                </p>
-                <a 
-                  href="/devis"
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-[#0056b3] bg-white hover:bg-gray-50"
-                >
-                  Demander un devis
-                </a>
-              </div>
-            </div>
-          </div>
-
           {/* Contenu principal */}
           <main>
             {children}
