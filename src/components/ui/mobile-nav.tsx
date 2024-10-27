@@ -3,14 +3,18 @@ import Link from 'next/link'
 import { Menu, X, Phone, ChevronDown } from 'lucide-react'
 
 const diagnosticsItems = [
-  { name: 'DPE', href: '/diagnostics/dpe' },
-  { name: 'Amiante', href: '/diagnostics/amiante' },
-  { name: 'Électricité', href: '/diagnostics/electricite' },
-  { name: 'Gaz', href: '/diagnostics/gaz' },
-  { name: 'Plomb', href: '/diagnostics/plomb' },
-  { name: 'Loi Carrez', href: '/diagnostics/carrez' },
-  { name: 'Loi Boutin', href: '/diagnostics/boutin' },
-  { name: 'ERP', href: '/diagnostics/erp' },
+  [
+    { name: 'DPE', href: '/diagnostics/dpe' },
+    { name: 'Amiante', href: '/diagnostics/amiante' },
+    { name: 'Électricité', href: '/diagnostics/electricite' },
+    { name: 'Gaz', href: '/diagnostics/gaz' },
+  ],
+  [
+    { name: 'Plomb', href: '/diagnostics/plomb' },
+    { name: 'Loi Carrez', href: '/diagnostics/carrez' },
+    { name: 'Loi Boutin', href: '/diagnostics/boutin' },
+    { name: 'ERP', href: '/diagnostics/erp' },
+  ],
 ]
 
 const mainNavItems = [
@@ -41,7 +45,7 @@ export function MobileNav() {
       {/* Menu Mobile */}
       {isOpen && (
         <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden z-50">
-          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div>
@@ -60,18 +64,16 @@ export function MobileNav() {
                 </div>
               </div>
               <div className="mt-6">
-                <nav className="grid gap-y-4">
+                <nav className="space-y-3">
                   {/* Menu principal */}
                   {mainNavItems.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
                       onClick={() => setIsOpen(false)}
                     >
-                      <span className="ml-3 text-base font-medium text-gray-900">
-                        {item.name}
-                      </span>
+                      {item.name}
                     </Link>
                   ))}
 
@@ -79,29 +81,33 @@ export function MobileNav() {
                   <div className="relative">
                     <button
                       onClick={() => setIsDiagnosticsOpen(!isDiagnosticsOpen)}
-                      className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 w-full"
+                      className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-gray-900 rounded-md hover:bg-gray-50"
                     >
-                      <span className="ml-3 text-base font-medium text-gray-900 flex items-center justify-between w-full">
-                        Diagnostics
-                        <ChevronDown className={`w-5 h-5 transform transition-transform ${isDiagnosticsOpen ? 'rotate-180' : ''}`} />
-                      </span>
+                      Diagnostics
+                      <ChevronDown className={`w-5 h-5 transform transition-transform ${isDiagnosticsOpen ? 'rotate-180' : ''}`} />
                     </button>
 
                     {isDiagnosticsOpen && (
-                      <div className="mt-2 ml-4 space-y-2">
-                        {diagnosticsItems.map((item) => (
-                          <Link
-                            key={item.name}
-                            href={item.href}
-                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#0056b3] hover:bg-gray-50"
-                            onClick={() => {
-                              setIsDiagnosticsOpen(false)
-                              setIsOpen(false)
-                            }}
-                          >
-                            {item.name}
-                          </Link>
-                        ))}
+                      <div className="mt-2 space-y-2 px-3 bg-gray-50 rounded-md py-2">
+                        <div className="grid grid-cols-2 gap-2">
+                          {diagnosticsItems.map((column, columnIndex) => (
+                            <div key={columnIndex} className="space-y-2">
+                              {column.map((item) => (
+                                <Link
+                                  key={item.name}
+                                  href={item.href}
+                                  className="block py-1 text-sm font-medium text-gray-700 hover:text-[#0056b3]"
+                                  onClick={() => {
+                                    setIsDiagnosticsOpen(false)
+                                    setIsOpen(false)
+                                  }}
+                                >
+                                  {item.name}
+                                </Link>
+                              ))}
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>
@@ -109,25 +115,21 @@ export function MobileNav() {
                   {/* Bouton Devis */}
                   <Link
                     href="/devis"
-                    className="-m-3 p-3 flex items-center rounded-md bg-[#0056b3] text-white hover:bg-blue-700"
+                    className="block px-3 py-2 rounded-md text-base font-medium text-white bg-[#0056b3] hover:bg-blue-700 text-center"
                     onClick={() => setIsOpen(false)}
                   >
-                    <span className="ml-3 text-base font-medium">
-                      Devis gratuit
-                    </span>
+                    Devis gratuit
                   </Link>
+
+                  {/* Bouton Téléphone */}
+                  <a
+                    href="tel:0766669948"
+                    className="flex items-center justify-center px-3 py-2 border border-[#0056b3] rounded-md text-base font-medium text-[#0056b3] hover:bg-blue-50"
+                  >
+                    <Phone className="w-5 h-5 mr-2" />
+                    07.66.66.99.48
+                  </a>
                 </nav>
-              </div>
-            </div>
-            <div className="py-6 px-5">
-              <div className="mt-4">
-                <a
-                  href="tel:0766669948"
-                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#0056b3] hover:bg-blue-700"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  07.66.66.99.48
-                </a>
               </div>
             </div>
           </div>
