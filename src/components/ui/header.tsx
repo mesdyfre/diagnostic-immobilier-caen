@@ -1,4 +1,5 @@
-"use client"
+
+    "use client"
 
 import { useState } from 'react'
 import Link from 'next/link'
@@ -30,12 +31,12 @@ const navigation = [
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
-  const diagnosticsItems = navigation.find(item => item.name === 'Diagnostics')?.children || []
 
   const isActive = (href: string) => pathname === href
 
   return (
-    <div className="relative bg-white">
+
+<div className="relative bg-white">
       {/* Bande supérieure */}
       <div className="bg-[#0056b3] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
