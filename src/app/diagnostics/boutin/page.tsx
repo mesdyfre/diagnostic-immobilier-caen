@@ -106,7 +106,7 @@ export default function BoutinPage() {
                   Elle correspond à la surface de plancher construite après déduction :
                 </p>
                 <ul className="mt-4 space-y-2">
-                  <li>Des surfaces occupées par les murs, cloisons, marches d'escalier</li>
+                  <li>Des surfaces occupées par les murs, cloisons, marches d&apos;escalier</li>
                   <li>Des surfaces de combles non aménagés, caves, sous-sols</li>
                   <li>Des surfaces des garages, parkings et dépendances</li>
                   <li>Des parties dont la hauteur est inférieure à 1,80m</li>
@@ -124,7 +124,7 @@ export default function BoutinPage() {
                   La Loi Boutin diffère de la Loi Carrez sur plusieurs points :
                 </p>
                 <ul className="mt-4 space-y-2">
-                  <li>S'applique aux locations (Loi Carrez pour les ventes)</li>
+                  <li>S&apos;applique aux locations (Loi Carrez pour les ventes)</li>
                   <li>Inclut les embrasures des portes et fenêtres</li>
                   <li>Prend en compte certaines surfaces annexes habitables</li>
                   <li>Ne concerne pas uniquement les lots de copropriété</li>
@@ -163,7 +163,7 @@ export default function BoutinPage() {
                   </div>
                   <div className="pt-4 border-t border-gray-200">
                     <h3 className="font-medium text-gray-900 mb-2">
-                      Zone d'intervention
+                      Zone d&apos;intervention
                     </h3>
                     <p className="text-gray-600">
                       Caen et tout le Calvados

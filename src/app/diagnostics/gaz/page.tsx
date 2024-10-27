@@ -1,4 +1,5 @@
-import Image from 'next/image';
+// Suppression de l'import Image non utilisé
+// import Image from 'next/image';
 
 export const viewport = {
   width: 'device-width',
@@ -53,9 +54,9 @@ export default function GazPage() {
               </h2>
               <div className="prose max-w-none text-gray-500">
                 <p>
-                  Le diagnostic gaz est une obligation légale qui vise à évaluer l'état des installations 
+                  Le diagnostic gaz est une obligation légale qui vise à évaluer l&apos;état des installations 
                   intérieures de gaz de votre bien immobilier. Ce contrôle permet de prévenir les risques 
-                  d'intoxication au monoxyde de carbone et d'explosion liés au gaz.
+                  d&apos;intoxication au monoxyde de carbone et d&apos;explosion liés au gaz.
                 </p>
               </div>
             </section>
@@ -87,7 +88,7 @@ export default function GazPage() {
                     Sécurité
                   </h3>
                   <p className="text-gray-600">
-                    Prévention des risques d'intoxication
+                    Prévention des risques d&apos;intoxication
                   </p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md">
@@ -152,7 +153,7 @@ export default function GazPage() {
                   </div>
                   <div className="pt-4 border-t border-gray-200">
                     <h3 className="font-medium text-gray-900 mb-2">
-                      Zone d'intervention
+                      Zone d&apos;intervention
                     </h3>
                     <p className="text-gray-600">
                       Caen et tout le Calvados

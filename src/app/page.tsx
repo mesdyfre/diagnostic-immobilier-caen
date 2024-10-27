@@ -12,7 +12,7 @@ import {
   Clock, 
   CheckCircle, 
   Phone,
-  Flame // Nouvelle icône pour le diagnostic gaz
+  Flame
 } from 'lucide-react'
 import { QuoteForm } from '@/components/ui/quote-form'
 
@@ -31,13 +31,13 @@ const diagnostics = [
   {
     href: '/diagnostics/amiante',
     title: 'Amiante',
-    description: 'Repérage des matériaux contenant de l\'amiante',
+    description: 'Repérage des matériaux contenant de l&apos;amiante',
     icon: Search,
   },
   {
     href: '/diagnostics/electricite',
     title: 'Électricité',
-    description: 'Vérification de l\'installation électrique',
+    description: 'Vérification de l&apos;installation électrique',
     icon: Zap,
   },
   {
@@ -218,7 +218,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
           <div className="lg:text-center mb-12">
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              <span className="block">Besoin d'un diagnostic ?</span>
+              <span className="block">Besoin d&apos;un diagnostic ?</span>
               <span className="block text-[#0056b3]">Demandez votre devis gratuit</span>
             </h2>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
@@ -257,7 +257,7 @@ export default function HomePage() {
 
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Zone d'intervention
+                  Zone d&apos;intervention
                 </h3>
                 <p className="text-gray-600">
                   Nous intervenons à Caen et dans tout le Calvados pour vos diagnostics immobiliers.

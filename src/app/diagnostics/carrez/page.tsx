@@ -1,5 +1,6 @@
 // app/diagnostics/carrez/page.tsx
-import Image from 'next/image';
+// Suppression de l'import Image non utilisé
+// import Image from 'next/image';
 
 export const viewport = {
   width: 'device-width',
@@ -9,7 +10,7 @@ export const viewport = {
 
 export const metadata = {
   title: 'Diagnostic Loi Carrez Caen - Expert certifié | Diag Immo Caen',
-  description: 'Expert en diagnostic Loi Carrez à Caen et dans le Calvados. Mesurage professionnel pour vente d\'appartement, certification de surface habitable. Devis gratuit.',
+  description: 'Expert en diagnostic Loi Carrez à Caen et dans le Calvados. Mesurage professionnel pour vente d&apos;appartement, certification de surface habitable. Devis gratuit.',
   openGraph: {
     title: 'Diagnostic Loi Carrez Caen - Mesure Carrez certifiée',
     description: 'Expert en diagnostic Loi Carrez à Caen. Certification de surface pour vente en copropriété. Intervention rapide dans le Calvados.',
@@ -55,8 +56,8 @@ export default function CarrezPage() {
               <div className="prose max-w-none text-gray-500">
                 <p>
                   La Loi Carrez (loi n° 96-1107 du 18 décembre 1996) impose un mesurage précis 
-                  de la surface habitable pour toute vente d'un lot en copropriété. Ce diagnostic 
-                  est obligatoire pour tous les lots de copropriété d'une surface supérieure à 8m².
+                  de la surface habitable pour toute vente d&apos;un lot en copropriété. Ce diagnostic 
+                  est obligatoire pour tous les lots de copropriété d&apos;une surface supérieure à 8m².
                 </p>
               </div>
             </section>
@@ -93,7 +94,7 @@ export default function CarrezPage() {
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <h3 className="text-lg font-semibold text-[#0056b3] mb-3">
-                    Délai d'intervention
+                    Délai d&apos;intervention
                   </h3>
                   <p className="text-gray-600">
                     Rapport fourni sous 24/48h
@@ -113,7 +114,7 @@ export default function CarrezPage() {
                   et couverts après déduction des éléments suivants :
                 </p>
                 <ul className="mt-4 space-y-2">
-                  <li>Murs, cloisons, marches et cages d'escaliers</li>
+                  <li>Murs, cloisons, marches et cages d&apos;escaliers</li>
                   <li>Embrasures des portes et fenêtres</li>
                   <li>Surfaces dont la hauteur est inférieure à 1,80m</li>
                   <li>Gaines techniques et cheminées</li>
@@ -152,7 +153,7 @@ export default function CarrezPage() {
                   </div>
                   <div className="pt-4 border-t border-gray-200">
                     <h3 className="font-medium text-gray-900 mb-2">
-                      Zone d'intervention
+                      Zone d&apos;intervention
                     </h3>
                     <p className="text-gray-600">
                       Caen et tout le Calvados

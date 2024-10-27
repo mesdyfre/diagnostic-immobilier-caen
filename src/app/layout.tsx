@@ -43,7 +43,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           {/* En-tête avec navigation */}
           <Header />
 
-          {/* Bannière d'information */}
+          {/* Bannière d&apos;information */}
           <div className="bg-[#0056b3] text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
               <div className="flex justify-between items-center">
@@ -92,10 +92,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
                   </div>
                 </div>
 
-                {/* Zone d'intervention */}
+                {/* Zone d&apos;intervention */}
                 <div>
                   <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">
-                    Zone d'intervention
+                    Zone d&apos;intervention
                   </h3>
                   <div className="mt-4 space-y-4">
                     <p className="text-base text-gray-500">
