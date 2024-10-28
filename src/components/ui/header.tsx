@@ -35,6 +35,7 @@ const navigation: NavigationItem[] = [
   },
   { name: 'À propos', href: '/a-propos' },
   { name: 'Contact', href: '/contact' },
+  { name: 'Espace Pro', href: '/pro' }, // Ajout de l'espace pro
 ]
 
 export function Header() {
@@ -56,7 +57,6 @@ export function Header() {
           </div>
         </div>
       </div>
-
 
       {/* Barre de navigation principale */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -119,6 +119,23 @@ export function Header() {
                 )
               }
 
+              // Style spécial pour l'Espace Pro
+              if (item.name === 'Espace Pro') {
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`${
+                      isActive(item.href)
+                        ? 'bg-[#0056b3] text-white'
+                        : 'text-[#0056b3] border-2 border-[#0056b3] hover:bg-[#0056b3] hover:text-white'
+                    } px-4 py-2 text-sm font-medium rounded-md transition-colors`}
+                  >
+                    {item.name}
+                  </Link>
+                )
+              }
+
               return (
                 <Link
                   key={item.name}
@@ -145,7 +162,7 @@ export function Header() {
             </Link>
           </div>
 
-      {/* Bouton menu mobile */}
+          {/* Bouton menu mobile */}
           <div className="flex items-center md:hidden">
             <button
               type="button"
@@ -168,7 +185,6 @@ export function Header() {
         <div className="md:hidden fixed inset-0 z-50">
           <div className="fixed inset-0 bg-black/20" aria-hidden="true" onClick={() => setMobileMenuOpen(false)} />
           <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-white shadow-lg">
-            {/* En-tête du menu mobile */}
             <div className="flex items-center justify-between p-4 border-b border-gray-200">
               <Image
                 src="/images/logo.png" 
@@ -185,7 +201,6 @@ export function Header() {
               </button>
             </div>
 
-            {/* Navigation mobile simplifiée */}
             <nav className="px-4 py-6">
               <ul className="space-y-2">
                 {/* Accueil */}
@@ -199,53 +214,50 @@ export function Header() {
                   </Link>
                 </li>
 
-{/* Diagnostics avec sous-menu */}
-<li>
-  <details className="group">
-    <summary className="flex items-center justify-between py-2 text-base font-medium text-gray-900 cursor-pointer">
-      Diagnostics
-      <ChevronDown className="w-5 h-5 text-gray-500 transition group-open:rotate-180" />
-    </summary>
-    <ul className="pl-4 mt-2 space-y-2">
-      {navigation
-        .find((item) => item.name === 'Diagnostics')
-        ?.children?.map((diagnostic) => (
-          <li key={diagnostic.name}>
-            <Link
-              href={diagnostic.href}
-              className="block py-2 text-sm text-gray-600 hover:text-[#0056b3]"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {diagnostic.name}
-            </Link>
-          </li>
-        ))}
-    </ul>
-  </details>
-</li>
-
-
-                {/* À propos */}
+                {/* Diagnostics avec sous-menu */}
                 <li>
-                  <Link 
-                    href="/a-propos"
-                    className="block py-2 text-base font-medium text-gray-900 hover:text-[#0056b3]"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    À propos
-                  </Link>
+                  <details className="group">
+                    <summary className="flex items-center justify-between py-2 text-base font-medium text-gray-900 cursor-pointer">
+                      Diagnostics
+                      <ChevronDown className="w-5 h-5 text-gray-500 transition group-open:rotate-180" />
+                    </summary>
+                    <ul className="pl-4 mt-2 space-y-2">
+                      {navigation
+                        .find((item) => item.name === 'Diagnostics')
+                        ?.children?.map((diagnostic) => (
+                          <li key={diagnostic.name}>
+                            <Link
+                              href={diagnostic.href}
+                              className="block py-2 text-sm text-gray-600 hover:text-[#0056b3]"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {diagnostic.name}
+                            </Link>
+                          </li>
+                        ))}
+                    </ul>
+                  </details>
                 </li>
 
-                {/* Contact */}
-                <li>
-                  <Link 
-                    href="/contact"
-                    className="block py-2 text-base font-medium text-gray-900 hover:text-[#0056b3]"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Contact
-                  </Link>
-                </li>
+                {/* Autres liens du menu mobile */}
+                {navigation
+                  .filter(item => !item.children && item.name !== 'Diagnostics')
+                  .map((item) => (
+                    <li key={item.name}>
+                      <Link 
+                        href={item.href}
+                        className={`block py-2 text-base font-medium ${
+                          item.name === 'Espace Pro'
+                            ? 'text-[#0056b3] font-bold'
+                            : 'text-gray-900 hover:text-[#0056b3]'
+                        }`}
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))
+                }
               </ul>
 
               {/* Boutons d'action */}
