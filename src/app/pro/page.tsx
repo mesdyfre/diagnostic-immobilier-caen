@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Building, Clock, FileCheck, Bell, Wallet, Users, Home, Receipt, Calendar } from 'lucide-react'
+import { Receipt, FileCheck, Calendar } from 'lucide-react'
 
 export default function ProServicesPage() {
   return (
@@ -18,7 +18,7 @@ export default function ProServicesPage() {
               <span className="block text-blue-200 mt-2">Simplifiez votre gestion immobilière</span>
             </h1>
             <p className="mt-6 text-xl text-blue-100 max-w-3xl mx-auto">
-              Une solution complète et adaptée pour les professionnels de l'immobilier
+              Une solution complète et adaptée pour les professionnels de l&apos;immobilier
             </p>
           </div>
         </div>
