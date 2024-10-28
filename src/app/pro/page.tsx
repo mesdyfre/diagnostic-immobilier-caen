@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Receipt, FileCheck, Calendar } from 'lucide-react'
+import { Calendar, FileCheck, Receipt } from 'lucide-react'
 
 export default function ProServicesPage() {
   return (
